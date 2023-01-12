@@ -1,0 +1,2 @@
+<?php
+include './add.php';

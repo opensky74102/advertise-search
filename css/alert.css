@@ -1,0 +1,43 @@
+.border-width-4 {
+  border-width: 4px !important;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;  
+}
+.h-100vh {
+  height: 100vh;
+}
+.z-index-1 {
+  z-index: 1;
+}
+.z-index-2 {
+  z-index: 2;
+}
+.opacity-05 {
+  opacity: 0.5;
+}
+.delay-01s {
+  animation-delay: 0.2s;
+}
+.delay-02s {
+  animation-delay: 0.4s;
+}
+.delay-03s {
+  animation-delay: 0.6s;
+}
+.delay-04s {
+  animation-delay: 0.8s;
+}
+.delay-05s {
+  animation-delay: 1s;
+}
+
+.alert-custom {
+   font-size: 18px;
+   color: white;
+   font-weight: 100;
+   font-family:'Times New Roman', Times, serif;
+   background: rgba(0, 0, 0, 0.3);
+   padding: 8px;
+   text-align: center;
+}

@@ -1,0 +1,26 @@
+CREATE DATABASE test;
+
+CREATE TABLE `test`.`users` 
+(
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `firstname` VARCHAR(50) NOT NULL,
+     `lastname` VARCHAR(50) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
+    `password` VARCHAR(100) NOT NULL,
+    `hash` VARCHAR(32) NOT NULL,
+    `active` BOOL NOT NULL DEFAULT 0,
+PRIMARY KEY (`id`) 
+);
+CREATE TABLE IF NOT EXISTS `posts`(
+    `id` int(8) NOT NULL AUTO_INCREMENT,
+    `user_id` int NOT NULL,
+    `title` text(255) NOT NULL,
+    `content` logntext NOT NULL,
+    `keywords` text NOT NULL,
+    `created_at` timestamp DEFAULT ,
+    `updated_at` timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `deleted_at` timestamp DEFAULT,
+)ENGINE=InnoDb  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+ALTER TABLE `posts`
+  ADD FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `posts` ADD FULLTEXT index_name(keywords);
