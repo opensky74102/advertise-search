@@ -15,9 +15,7 @@ session_start();
     <p>
     <?php 
     if( isset($_SESSION['message']) AND !empty($_SESSION['message']) ):
-        echo $_SESSION['message'];    
-    else:
-        header( "location: /" );
+        echo $_SESSION['message'];
     endif;
     ?>
     </p>

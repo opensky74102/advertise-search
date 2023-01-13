@@ -1,17 +1,10 @@
 <?php
-/*Yeah! The password reset form, the link to this page is included
-   from the forgot.php email message
-*/
 require 'db.php';
 session_start();
-
-//Hey! Make sure email and hash variables aren't empty
 if( isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash']) )
 {
     $email = $mysqli->escape_string($_GET['email']); 
-    $hash = $mysqli->escape_string($_GET['hash']); 
-
-    //Hey! Make sure user email with matching hash exist
+    $hash = $mysqli->escape_string($_GET['hash']);
     $result = $mysqli->query("SELECT * FROM users WHERE email='$email' AND hash='$hash'");
 
     if ( $result->num_rows == 0 )
@@ -34,10 +27,7 @@ else {
 </head>
 
 <body>
-
-<!--Display Site Logo at The Top-->
-<a href="#"><img src="img/logo.png"></a> <!--My own website address (edited)-->
-
+<a href="#"><img src="img/logo.png"></a>
     <div class="form">
 
           <h1>Choose Your New Password</h1>

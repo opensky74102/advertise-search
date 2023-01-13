@@ -1,5 +1,8 @@
 <?php
 include './controller/session_start.php';
+if ($login == false) {
+  header('location: /login.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,18 +16,13 @@ include './controller/session_start.php';
 
 <body>
   <?php
-  if ($login == false) {
-    header('location: /login.php');
-  } ?>
-  <!-- <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a> -->
-  <?php
   include "layout/header.layout.php";
   ?>
   <div class="search_container pt-350 d-flex">
 
     <div class="form-outline">
-      <input type="search" class="text-right" id="q" placeholder="Search..." value="" name="q"
-        form="search_form" autofocus>
+      <input type="search" class="text-right" id="q" placeholder="Search..." value="" name="q" form="search_form"
+        autofocus>
     </div>
     <button type="submit" class="btn btn-lg btn-primary" form="search_form">
       <i class="fa fa-search"></i>

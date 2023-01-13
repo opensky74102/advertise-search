@@ -10,20 +10,17 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $emailErr = "Invalid email format";
     $_SESSION['message'] = $emailErr;
     return;
-    // header("location: index.php");
 }
 if (strlen($_POST['password']) < 1) {
     $_SESSION['message'] = "Password is not empty";
     return;
-    // header("location: index.php");
 }
 $result = $mysqli->query("SELECT * FROM users WHERE email='$email'");
 
-if ($result->num_rows == 0) { // User doesn't exist
+if ($result->num_rows == 0) {
     $_SESSION['message'] = "User with that email doesn't exist!";
     return;
-    // header("location: index.php");
-} else { // User exists
+} else {
     $user = $result->fetch_assoc();
 
     if (password_verify($_POST['password'], $user['password'])) {
@@ -32,17 +29,12 @@ if ($result->num_rows == 0) { // User doesn't exist
         $_SESSION['firstname'] = $user['firstname'];
         $_SESSION['lastname'] = $user['lastname'];
         $_SESSION['active'] = $user['active'];
-
-        // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = 1;
         $_SESSION['msg']['msg_s'] = '';
         $_SESSION['msg']['msg_c'] = '';
-
-
         header("location: /");
     } else {
         $_SESSION['message'] = "You have entered wrong password, try again!";
         return;
-        // header("location: index.php");
     }
 }

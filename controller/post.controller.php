@@ -70,7 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $now = date("Y-m-d H:i:s");
     $sql = "INSERT INTO posts (user_id, title, content, ad_link, keywords, pay)"
       . " VALUES ('$user_id', '".htmlspecialchars($title, ENT_QUOTES)."','".htmlspecialchars($content, ENT_QUOTES)."','".htmlspecialchars($url, ENT_QUOTES)."', '".htmlspecialchars($keywords, ENT_QUOTES)."', '$paid')";
-    var_dump($sql);
     if (($mysqli->query($sql))) {
       $_SESSION['msg']['msg_s'] = 'success';
       $_SESSION['msg']['msg_c'] = $paid == '0' ? 'New free ad posting success!' : 'New paid ad posting success!';

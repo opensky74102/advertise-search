@@ -1,5 +1,8 @@
 <?php
 include './controller/session_start.php';
+if ($login == false) {
+  header('location: ./login.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,11 +15,6 @@ include './controller/session_start.php';
 </head>
 
 <body>
-  <?php
-  if ($login == false) {
-    header('location: ./login.php');
-  }  ?>
-  <!-- <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a> -->
   <?php
   include "layout/header.layout.php";
   ?>

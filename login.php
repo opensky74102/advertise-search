@@ -1,22 +1,6 @@
-<!--A Code To Creaet Production
-    Account creation and Login Process
- -->
-<!--**************************************-->
-
 <?php
-/* Main page with two forms: sign up and log in */
-require 'db.php'; //read from the database
+require 'db.php';
 session_start();
-?>
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Signup - Login</title>
-  <?php include './css/css.html'; ?>
-</head>
-
-<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_POST['login'])) {
     require './controller/login.controller.php';
@@ -28,13 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 ?>
+<!DOCTYPE html>
+<html>
 
-
+<head>
+  <title>Signup - Login</title>
+  <?php include './css/css.html'; ?>
+</head>
 <body>
-
-  <!-- <a href="#"><img src="img/logo.png"></a> -->
-  <!--Site Logo-->
-
   <?php
   if (isset($_SESSION['message']) && strlen($_SESSION['message']) > 0) {
     $err = $_SESSION['message'];
@@ -57,9 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </ul>
       <div class="tab-content">
         <div id="login">
-          <!-- <div class="form-title">
-            <h1>L</h1>
-          </div> -->
           <form action="login.php" method="post" autocomplete="off">
             <div class="field-wrap">
               <input type="email" name="email" placeholder="Email Address" />

@@ -1,5 +1,4 @@
 <?php
-/* Displays all error messages */
 session_start();
 ?>
 <!DOCTYPE html>

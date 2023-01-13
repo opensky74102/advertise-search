@@ -78,7 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $user_id = $user['id'];
     $now = date("Y-m-d H:i:s");
     $sql = "UPDATE  posts SET title='" . htmlspecialchars($title, ENT_QUOTES) . "', content='" . htmlspecialchars($content, ENT_QUOTES) . "', ad_link='" . htmlspecialchars($url, ENT_QUOTES) . "', keywords='" . htmlspecialchars($keywords, ENT_QUOTES) . "', pay=" . $paid . " where id='" . $post_id . "'";
-    var_dump($sql);
     if (($mysqli->query($sql))) {
       $_SESSION['msg']['msg_s'] = 'success';
       $_SESSION['msg']['msg_c'] = $paid == '0' ? 'Free ad updating success!' : 'Paid ad updating success!';
