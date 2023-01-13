@@ -13,18 +13,18 @@ session_start();
 
 <head>
   <title>Signup - Login</title>
-  <?php include '/css/css.html'; ?>
+  <?php include './css/css.html'; ?>
 </head>
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_POST['login'])) {
-    require '/controller/login.controller.php';
+    require './controller/login.controller.php';
 
   } elseif (isset($_POST['register'])) {
-    require '/controller/register.controller.php';
+    require './controller/register.controller.php';
   } elseif (isset($_POST['google_login'])) {
-    require '/controller/google_login.php';
+    require './controller/google_login.php';
   }
 }
 ?>
@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   </footer>
 
   <!--Load Cloudflare jquery.min.js online-->
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <!--Load index.js from the resource folder-->
   <script src="js/index.js"></script>
 

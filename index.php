@@ -8,7 +8,7 @@ include './controller/session_start.php';
   <meta charset="UTF-8">
   <title>Welcome
   </title>
-  <?php include 'css/css.html'; ?>
+  <?php include './css/css.html'; ?>
 </head>
 
 <body>
@@ -33,7 +33,7 @@ include './controller/session_start.php';
     </form>
   </div>
   <!--Load Cloudflare jquery.min.js online-->
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <!--Load index.js from the resource folder-->
   <script src="js/index.js"></script>
 

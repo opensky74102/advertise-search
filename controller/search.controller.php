@@ -20,14 +20,6 @@ if (!isset($_REQUEST['q']) || ($_REQUEST['q'] == '')) {
     } else {
       $num_rows = $post_res->num_rows;
     }
-
-    if ($num_rows < 1) {
-      $res = [];
-    } else {
-      // $res = $post_res->fetch_array();
-      // var_dump($res);
-    }
-
   }
   $searched = true;
 }

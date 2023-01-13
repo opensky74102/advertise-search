@@ -1,33 +1,33 @@
 <?php
-include "../../controller/session_start.php";
-if ($login==false) {
-  header('location:/');
-}
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-  if (isset($_GET['p']) && $_GET['p'] == 'free') {
-    $paid = 0;
-  } elseif (isset($_GET['p']) && $_GET['p'] == 'paid') {
-    $paid = 20;
-  } else {
-    $paid = 0;
+  include "../../controller/session_start.php";
+  if ($login == false) {
+    header('location:/');
   }
-} else {
-  header("location: /index.php");
-}
-$title = '';
-$content = '';
-$url = "";
-$keywords = "";
-if (isset($_SESSION['postdata']) && $_SESSION['postdata']) {
-  $p = $_SESSION['postdata'];
-  unset($_SESSION['postdata']);
-  $title = $p['title'];
-  $content = $p['content'];
-  $url = $p['url'];
-  $keywords = $p['keywords'];
-} else {
+  if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    if (isset($_GET['p']) && $_GET['p'] == 'free') {
+      $paid = 0;
+    } elseif (isset($_GET['p']) && $_GET['p'] == 'paid') {
+      $paid = 20;
+    } else {
+      $paid = 0;
+    }
+  } else {
+    header("location: /index.php");
+  }
+  $title = '';
+  $content = '';
+  $url = "";
+  $keywords = "";
+  if (isset($_SESSION['postdata']) && $_SESSION['postdata']) {
+    $p = $_SESSION['postdata'];
+    unset($_SESSION['postdata']);
+    $title = $p['title'];
+    $content = $p['content'];
+    $url = $p['url'];
+    $keywords = $p['keywords'];
+  } else {
 
-}
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -82,7 +82,7 @@ if (isset($_SESSION['postdata']) && $_SESSION['postdata']) {
 
 
 </body>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
 <!--Load index.js from the resource folder-->
 <script src="../../js/index.js"></script>

@@ -34,5 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("location: login.php");  //This will only run if you there's an error
     }
 
+} else {
+    header("location:/");
 }
 ?>

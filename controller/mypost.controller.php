@@ -1,6 +1,9 @@
 <?php
 session_start();
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+  header("location:/");
+  return;
+} else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $s = true;
   $post_id = '';
   $paid = "0";
@@ -89,7 +92,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       return;
     }
   }
-} else {
-  header("location:/login.php");
-  return;
 }

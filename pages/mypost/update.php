@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   if (isset($_GET['id']) && $_GET['id'] != '') {
     $post_id = $_GET['id'];
   } else {
-    header("location: " . $_SERVER['HTTP_REFERER']);
+    header("location: /");
     return;
   }
 } else {
@@ -96,7 +96,7 @@ if (isset($_SESSION['postdata']) && $_SESSION['postdata']) {
 
 
 </body>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
 <!--Load index.js from the resource folder-->
 <script src="../../js/index.js"></script>

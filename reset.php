@@ -62,13 +62,13 @@ else {
           <input type="hidden" name="email" value="<?= $email ?>">    
           <input type="hidden" name="hash" value="<?= $hash ?>">    
               
-          <button class="button button-block"/>Apply</button>
+          <button class="button button-block gradient-custom">Apply</button>
           
           </form>
 
     </div>
  <!--Load Cloudflare jquery.min.js online-->   
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <!--Load index.js from the resource folder--> 
   <script src="js/index.js"></script>
 

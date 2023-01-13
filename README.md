@@ -21,5 +21,5 @@
   <li>MySQL</li>
   <li>HTML</li>
   <li>CSS</li>
-  <li>The Cloudfare JQuery embeded just right before the <code> /body </code> tag loads online:       http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js</li>
+  <li>The Cloudfare JQuery embeded just right before the <code> /body </code> tag loads online:       https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js</li>
  </ul>

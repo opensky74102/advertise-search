@@ -14,8 +14,8 @@ include './controller/session_start.php';
 <body>
   <?php
   if ($login == false) {
-    header('location: /login.php');
-  } ?>
+    header('location: ./login.php');
+  }  ?>
   <!-- <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a> -->
   <?php
   include "layout/header.layout.php";
@@ -68,11 +68,10 @@ include './controller/session_start.php';
     </div>
   <?php } ?>
   </div>
-  <? endif; ?>
 
 
   <!--Load Cloudflare jquery.min.js online-->
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <!--Load index.js from the resource folder-->
   <script src="js/index.js"></script>
 

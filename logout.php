@@ -21,7 +21,7 @@ session_destroy();
           <p><?= 'You have been logged out!'; ?></p>
           
           <!--Yeah! We navigate back to Home page of the site-->
-          <a href="index.php"><button class="button button-block"/>Home</button></a>
+          <a href="/login.php"><button class="button button-block gradient-custom">Home</button></a>
 
     </div>
 </body>

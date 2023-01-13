@@ -36,12 +36,14 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
         Please click this link to reset your password:
 
-        http://localhost/CTC/Applet/reset.php?email='.$email.'&hash='.$hash;  
+        https://localhost/CTC/Applet/reset.php?email='.$email.'&hash='.$hash;  
 
         mail($to, $subject, $message_body);
 
         header("location: success.php");
   }
+} else {
+   header("location:/");
 }
 ?>
 <!DOCTYPE html>
@@ -63,12 +65,12 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
       </label>
       <input type="email"required autocomplete="off" name="email"/>
     </div>
-    <button class="button button-block">Reset</button>
+    <button class="button button-block gradient-custom">Reset</button>
     </form>
   </div>
           
 <!--Load Cloudflare jquery.min.js online-->   
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <!--Load index.js from the resource folder--> 
   <script src="js/index.js"></script>
 </body>
